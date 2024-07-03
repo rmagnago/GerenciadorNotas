@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5f89f075-6a41-4f87-a68a-1780203ccce0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="cliente" class="model.Cliente">
+		<fieldDescription><![CDATA[cliente]]></fieldDescription>
+	</field>
+	<field name="dataVencimento" class="java.util.Date">
+		<fieldDescription><![CDATA[dataVencimento]]></fieldDescription>
+	</field>
+	<field name="idNota" class="java.lang.Integer">
+		<fieldDescription><![CDATA[idNota]]></fieldDescription>
+	</field>
+	<field name="nNota" class="java.lang.String">
+		<fieldDescription><![CDATA[nNota]]></fieldDescription>
+	</field>
+	<field name="paga" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[paga]]></fieldDescription>
+	</field>
+	<field name="valorNota" class="java.lang.Double">
+		<fieldDescription><![CDATA[valorNota]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="79" uuid="6269cb90-f533-4763-a9cf-fe89b48c8d87"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="28" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PaymentSys]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="36" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="57" height="20" uuid="60be3322-b2eb-471a-ae4d-2b5319f768c5"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="57" y="0" width="140" height="20" uuid="d251e751-836c-405b-bbe0-363424b6d022"/>
+				<text><![CDATA[Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="269" y="0" width="107" height="20" uuid="6a049464-6f21-4c2b-8e6e-3c10210e01ba"/>
+				<text><![CDATA[Valor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="197" y="0" width="72" height="20" uuid="2999eb5d-1642-4125-908c-a7da77b8c499"/>
+				<text><![CDATA[Prestaçãp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="376" y="0" width="100" height="20" uuid="5126fb52-d683-45ba-af51-87e1ec5e8358"/>
+				<text><![CDATA[Data Vencimento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="476" y="0" width="79" height="20" uuid="e5c3d68c-76cb-4f40-91fc-411faf8d898c"/>
+				<text><![CDATA[Foi Paga]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="57" height="20" uuid="98d97ecf-3df7-40b6-80b9-9533618ea880"/>
+				<textFieldExpression><![CDATA[$F{idNota}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="57" y="0" width="140" height="20" uuid="dc79d6b7-00c0-4f77-a289-06af636bd542"/>
+				<textFieldExpression><![CDATA[""+$F{cliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="269" y="0" width="107" height="20" uuid="d4da66ca-cd26-4c42-9ca6-76aaa997fbcc"/>
+				<textFieldExpression><![CDATA[$F{valorNota}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="197" y="0" width="72" height="20" uuid="1dfb235b-eec9-4ca1-a1e2-163be9ccd950"/>
+				<textFieldExpression><![CDATA[$F{nNota}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="376" y="0" width="100" height="20" uuid="bfda5be1-dad4-409c-9027-a1f66bb8d738"/>
+				<textFieldExpression><![CDATA[$F{dataVencimento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="476" y="0" width="79" height="20" uuid="58b9252f-0f6f-4f6b-b308-d2141aa89811"/>
+				<textFieldExpression><![CDATA[$F{paga}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
